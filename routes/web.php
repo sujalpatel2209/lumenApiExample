@@ -14,3 +14,12 @@
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+
+/**
+ * Routes for resource student
+ */
+$app->get('student', 'StudentController@all');
+$app->get('student/{id}', 'StudentController@get');
+$app->post('student', 'StudentController@add');
+$app->put('student/{id}', 'StudentController@put');
+$app->delete('student/{id}', 'StudentController@remove');
