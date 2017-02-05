@@ -21,5 +21,6 @@ $app->get('/', function () use ($app) {
 $app->get('student', 'StudentController@all');
 $app->get('student/{id}', 'StudentController@get');
 $app->post('student', 'StudentController@add');
-$app->put('student/{id}', 'StudentController@put');
+//$app->put('student/{id}', 'StudentController@put');
+$app->post('student/update', 'StudentController@update');
 $app->delete('student/{id}', 'StudentController@remove');
