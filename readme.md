@@ -1,3 +1,56 @@
+
+
+# Follow Below Step To Run this Repository
+
+1. Install Lumen Micro Framework
+
+  -> Follow Lumen Doc Step : https://lumen.laravel.com/docs/5.4
+
+2. Start Lumen Server
+
+  -> php -S localhost:8000 -t public
+
+3. In Lumen Model and Controller not Supported. That why Install lumen-generator package.
+
+  -> composer require wn/lumen-generators
+
+  Then add the service provider in the file app/Providers/AppServiceProvider.php like the following:
+
+  public function register()
+  {
+      if ($this->app->environment() == 'local') {
+          $this->app->register('Wn\Generators\CommandsServiceProvider');
+      }
+  }
+
+  Create Model : php artisan wn:model ModelName
+  Create Controller : php artisan wn:controller ControllerName
+
+  Reference Link : https://github.com/webNeat/lumen-generators#installation
+
+4. Add Below Line in bootstrap/app.php file.
+
+  -> $app->register('Wn\Generators\CommandsServiceProvider');
+
+5. Uncomment below two lines in bootstrap/app.php file.
+
+  -> $app->withFacades();
+  -> $app->withEloquent();
+
+Demo API Example Reference Link : https://coderexample.com/restful-api-in-lumen-a-laravel-micro-framework/
+
+
+Run this Demo API using below links.
+
+  Run : php -S localhost:8000 -t public
+
+1. Add Record : http://localhost:8000/student - POST METHOD
+2. Remove Record : http://localhost:8000/student/{id} - DELETE METHOD
+3. Fetch All Records : http://localhost:8000/student - GET METHOD
+4. Fetch Single Rcord : http://localhost:8000/student/{id} - GET METHOD
+5. Update Record : http://localhost:8000/student/update = POST METHOD
+
+
 # Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
