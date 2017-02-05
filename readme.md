@@ -40,7 +40,7 @@
 Demo API Example Reference Link : https://coderexample.com/restful-api-in-lumen-a-laravel-micro-framework/
 
 
-Run this Demo API using below links.
+Demo API using below links.
 
   Run : php -S localhost:8000 -t public
 
