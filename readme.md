@@ -39,8 +39,14 @@
 
 Demo API Example Reference Link : https://coderexample.com/restful-api-in-lumen-a-laravel-micro-framework/
 
+Run api without serve command : https://laracasts.com/discuss/channels/lumen/troubles-running-a-lumen-app-on-a-shared-hosting
 
-Run this Demo API using below links.
+Add Below two line in public/index.php file. then run http://localhost/lumen/userApi/public/student
+
+$request = Illuminate\Http\Request::capture();
+$app->run($request);
+
+Demo API using below links.
 
   Run : php -S localhost:8000 -t public
 
