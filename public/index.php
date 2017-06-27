@@ -26,3 +26,7 @@ $app = require __DIR__.'/../bootstrap/app.php';
 */
 
 $app->run();
+
+// Remove Below Comment for run api without using  // php -S localhost:8000 -t public Command
+//$request = Illuminate\Http\Request::capture();
+//$app->run($request);
